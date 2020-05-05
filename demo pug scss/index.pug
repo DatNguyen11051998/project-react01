@@ -1,0 +1,91 @@
+doctype html
+head 
+  title Demo HTML
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='scss/main.css')
+header
+  nav.menu-top
+    .logo-left
+      h1
+        a(href='#') LOGO
+    .menu-right
+      label(for='menu-toggle')
+        i.fa.fa-bars
+      input#menu-toggle(type='checkbox')
+      ul#menu
+        -var list =[{name:"Home"},{name:'About'},{name:'Blog'},{name:'Service'},{name:'Contact'}]
+          each val in list
+            li 
+              a(href="#")=val.name
+section.banner
+  .iam
+    img(src='img/dat.jpg' alt='avatar')
+    h3 NGUYỄN VĂN ĐẠT
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    button LEARN ME
+section.about-me
+  .section-title
+    h2 ABOUT ME
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, eveniet nobis quos ipsa eligendi quam quo dolore quisquam quidem dignissimos, libero, odio sapiente enim amet. Dicta culpa reprehenderit laudantium molestias?
+  .about-detail.content
+    .about-detail-left.col-6-about
+      br
+      h2 Giới thiệu
+      br
+      p Là sinh viên năm 4 đại học thủy lợi
+      br
+      p Email: datnv621@wru.vn
+      br
+      p SĐT: 0327540777
+      br
+    .about-detail-right.col-6-about
+      h2 Skills
+      .skill
+        .skill-items
+          span Codding
+          span 75%
+        .progress-bg
+          .progress-bar(style='width:75%')
+      .skill
+        .skill-items
+          span HTML
+          span 50%
+        .progress-bg
+          .progress-bar(style='width:50%')
+      .skill
+        .skill-items
+          span CSS
+          span 100%
+        .progress-bg
+          .progress-bar(style='width:100%')
+section.project-me
+  .section-title
+    h2 PROJECT-ME
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, eveniet nobis quos ipsa eligendi quam quo dolore quisquam quidem
+  .project-detail.content
+ 
+    -var list_item = [{img:'item.png',name:'HTML'},{img:'3.jpg',name:'CSS'},{img:'2.jpg',name:'JAVASCRIPT'}]
+    each val in list_item
+      .item-project.col-4-project
+       a(href='#')
+         .img
+           img(src="img/" + val.img)
+           h2=val.name
+    
+section.contact
+  .section-title
+    h2 CONTACT
+  .contact-form
+    form(action='')
+      input.form-control(type='text' placeholder='Email')
+      input.form-control(type='text' placeholder='Subject')
+      textarea.form-control(cols='30' rows='10' placeholder='Comment')
+      button.btn-send(type='submit') Send
+footer
+  p All right
+script.
